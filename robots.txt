@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.saracharlton.org.uk/sitemap.xml
