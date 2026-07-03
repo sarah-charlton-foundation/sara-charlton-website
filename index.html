@@ -209,6 +209,14 @@
     .cookie { flex-direction: column; align-items: stretch; gap: 10px; }
     .cookie p { flex: none; }
   }
+  .panel.apply-dark { background: linear-gradient(160deg, var(--plum) 0%, var(--plum-deep) 100%); color:#fff; }
+  .panel.apply-dark h2 { color:#fff; }
+  .panel.apply-dark .timetable-dark li { border-bottom:1px solid rgba(255,255,255,.18); }
+  .panel.apply-dark .timetable-dark span { color:#EEDFEF; }
+  .panel.apply-dark .timetable-dark b { color:#fff; }
+  .panel.donate-light { background: var(--cream); border:1px solid var(--line); }
+  .panel.donate-light h2 { color:var(--plum-deep); }
+  .panel.donate-light .lead { color:var(--ink); }
 </style>
 </head>
 <body>
@@ -440,21 +448,21 @@
 <!-- ================= APPLY + DONATE ================= -->
 <section id="apply">
   <div class="wrap split">
-    <div class="panel apply reveal">
-      <p class="eyebrow">For organisations</p>
+    <div class="panel apply-dark reveal">
+      <p class="eyebrow" style="color:var(--gold-soft);">For organisations</p>
       <h2>Apply for funding</h2>
-      <p class="body" style="color:#4A3F50;">We accept applications for two programmes only — Independent Domestic Violence Advisors (IDVAs) and Prevention Workers. We give priority to applications where joint funding is secured.</p>
-      <ul class="timetable">
+      <p style="color:#EEDFEF; line-height:1.6;">We accept applications for two programmes only — Independent Domestic Violence Advisors (IDVAs) and Prevention Workers. We give priority to applications where joint funding is secured.</p>
+      <ul class="timetable timetable-dark">
         <li><span>Applications open</span><b>5 Sept – 5 Dec</b></li>
         <li><span>Deadline</span><b>4pm, 5 Dec</b></li>
         <li><span>Shortlisted applicants contacted</span><b>from 16 Dec</b></li>
         <li><span>Decisions confirmed by</span><b>1 March</b></li>
         <li><span>Funding period</span><b>April – April</b></li>
       </ul>
-      <a href="#contact" class="btn btn-plum">Request an application pack</a>
+      <a href="#contact" class="btn">Request an application pack</a>
     </div>
-    <div class="panel donate reveal" id="donate">
-      <p class="eyebrow" style="color:var(--gold-soft);">Support our work</p>
+    <div class="panel donate-light reveal" id="donate">
+      <p class="eyebrow">Support our work</p>
       <h2>Donate</h2>
       <p class="lead">Charities tackling domestic abuse are woefully underfunded. Your gift goes directly to the frontline services helping women and children rebuild their lives.</p>
       <ul class="ticks">
