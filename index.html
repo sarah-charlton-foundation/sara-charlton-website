@@ -217,6 +217,24 @@
   .panel.donate-light { background: var(--cream); border:1px solid var(--line); }
   .panel.donate-light h2 { color:var(--plum-deep); }
   .panel.donate-light .lead { color:var(--ink); }
+
+  /* Sara's Story expandable */
+  #sara .two-col { align-items: flex-start; }
+  .story-toggle { margin-top: 26px; }
+  .story-toggle > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px; color: var(--plum); border-bottom: 2px solid var(--gold); padding-bottom: 5px; transition: color .18s ease; }
+  .story-toggle > summary::-webkit-details-marker { display: none; }
+  .story-toggle > summary:hover { color: var(--gold); }
+  .story-toggle .chev { color: var(--gold); font-size: 18px; line-height: 1; transition: transform .25s ease; }
+  .story-toggle[open] .chev { transform: rotate(90deg); }
+  .story-toggle .lbl-close { display: none; }
+  .story-toggle[open] .lbl-open { display: none; }
+  .story-toggle[open] .lbl-close { display: inline; }
+  .story-full { margin-top: 26px; padding-top: 26px; border-top: 1px solid var(--line); }
+  .story-full h3 { font-family: 'Inter', sans-serif; font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .story-full p { color: #4A3F50; }
+  .story-full p + p { margin-top: 16px; }
+  .story-full .signoff { font-style: italic; color: var(--muted); margin-top: 18px; }
+  @media (prefers-reduced-motion: reduce){ .story-toggle .chev { transition: none; } }
 </style>
 </head>
 <body>
@@ -277,8 +295,7 @@
   <div class="wrap two-col">
     <div class="photo has-img reveal" style="border-radius:var(--radius);"><img loading="lazy" src="sara.jpg" alt="Sara Charlton" style="border-radius:var(--radius);"></div>
     <div class="body reveal">
-      <p class="eyebrow">Sara's story</p>
-      <h2>The woman this Foundation is named for.</h2>
+      <h2>Sara's Story</h2>
       <p class="memorial">Sara Charlton · born 31 January 1957</p>
       <p>Sara dedicated her life to helping people society had left behind. From a young age she volunteered — working with families at Children North East, then with Gingerbread, supporting single parents. In 1992 she co-founded "Time Out," a non-profit providing childcare to her community, and in 2001 a second, Low Fell Link. Over the years, more than 500 children passed through her care, and she helped hundreds of people back into work.</p>
       <div class="quote-inline">
@@ -286,7 +303,26 @@
         <cite>— Leonard Charlton, Sara's son</cite>
       </div>
       <p>The Foundation carries on her work: funding the services that help women and children living with domestic abuse find safety and a way forward.</p>
-      <!-- TODO: confirm Sara's date of passing to complete the memorial line, and supply a higher-resolution photo. Leonard's full tribute is on the current site and can run in full on the Sara's story page. -->
+
+      <details class="story-toggle">
+        <summary>
+          <span class="chev" aria-hidden="true">&rsaquo;</span>
+          <span class="lbl-open">Read Sara's full story, in Leonard's words</span>
+          <span class="lbl-close">Close Sara's story</span>
+        </summary>
+        <div class="story-full">
+          <h3>Sara Charlton &mdash; by her son, Leonard Charlton</h3>
+          <p>My mother made her entrance into the world on the 31st January 1957. From a young age, my mum started doing volunteer work and found her true vocation &mdash; to help people who society had left behind. She worked with problematic families at Children North East and continued her voluntary work by joining Gingerbread, an organisation which specialised in supporting single parents. She felt so passionately about her work that in 1992 she and a friend co-founded &ldquo;Time Out,&rdquo; a non-profit organisation that provided childcare support to the community. Not content with her previous achievements, she went on and co-founded a second organisation, Low Fell Link, in 2001. By the end she was taking care of 500 children and helped hundreds of people get back to work. My Mum always wanted to do more, and towards the end of her life, she intended to help the homeless and to work again as a volunteer in order to help those a little lost in their lives.</p>
+          <p>My Mother had many special characteristics. One of them, which was pretty obvious to all, was that she was fearless. I will never forget the day that Newcastle&rsquo;s most notorious hardman gently kicked me up the bottom. My mother immediately came to the rescue and went storming over to him and told him in no uncertain terms that his days would be numbered if he ever came near me again. The man, in total disbelief, put out his hand and asked to shake my Mother&rsquo;s hand in admiration of a woman so protective over her son and who was not willing to bow down to anybody.</p>
+          <p>Determination was another quality she had in abundance. Life was not always easy for my Mother but she refused to let anything get her down. She completely re-trained and created opportunities from very little. When I was with her, I always felt such a strong sense of security and hope. Her character was so pure and energy intense.</p>
+          <p>I have never known a person so kind and thoughtful. She always put family ahead of herself and was most happy when she saw those close to her being happy. At school I was the best dressed little boy and teachers would comment and ask her how she did it. She would never comment, but the truth is she sacrificed everything for her son. But her kindness stretched way beyond her family &mdash; I remember how we used to walk together along Piccadilly and there would be days when she would speak to and give money to literally every homeless person she walked past. She almost knew instinctively who really needed help.</p>
+          <p>My mother was also fair, truthful and humble. She was a strong believer in the importance of truth and always had the self-belief to be completely honest in all her affairs. She had no interest in objects and was never impressed by material items. She had such a liberal outlook towards people and did not care about a person&rsquo;s religion, colour or social class. She never boasted about anything that went her way. She was quietly proud but never arrogant.</p>
+          <p>The wisdom she possessed was profound and her approach to life positive and pragmatic. I have had moments in my life when I doubted my resilience, and her powers of persuasion and rationale always showed me the light.</p>
+          <p>Altruism is something which came so naturally to my Mum, and her desire to enjoy life and appreciate every moment was an essential part of her being. She had an infectious laugh and cheeky sense of humour which we have all enjoyed &mdash; and most of us also found ourselves on the receiving end at various points!</p>
+          <p>Everyone that I am close to knows that my Mum was a very special Mum. I had the most wonderful childhood I could have ever wished for thanks to her dedication and selflessness. During our lives she was my Mum and best friend. She was a loving Aunt, a caring sister, a great friend and a kind daughter. She was one in a million. I am convinced she would have made a big contribution to our world if God had not decided she was needed more somewhere else. If one day my children have a Mother half as special as Sara Charlton, they will be lucky beyond their wildest dreams.</p>
+          <p class="signoff">&mdash; Leonard Charlton</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>
